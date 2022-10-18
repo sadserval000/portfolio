@@ -1,13 +1,19 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
 		<h1><span class="text-gradient">sadserval000</span></h1>
-		<img class="header-image" src="media/sadserval.jpg"/>
-		<Card href="/current-project" title="View Current Project" body="" classes=""/>
+		<img class="header-image" src="media/sadserval.jpg" />
+		<Card
+			href="/current-project"
+			title="View Current Project"
+			body=""
+			classes=""
+			external={false}
+		/>
 	</main>
 </Layout>
 

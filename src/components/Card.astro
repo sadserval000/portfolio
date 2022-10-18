@@ -4,13 +4,14 @@ export interface Props {
 	body: string;
 	href: string;
 	classes: string;
+	external: boolean
 }
 
-const { href, title, body, classes } = Astro.props;
+const { href, title, body, classes, external } = Astro.props;
 ---
 
 <li class={`link-card ${classes}`}>
-	<a href={href}>
+	<a href={href} target={external ? "_blank" : ""}>
 		<h2>
 			{title}
 			<span>&rarr;</span>

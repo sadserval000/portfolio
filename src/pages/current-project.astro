@@ -1,133 +1,201 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro"
+import Card from "../components/Card.astro";
 ---
+
 <Layout title="Personas & Storyboarding">
   <main>
-    <Card title="Back" body="" href="/" classes="fixed"/>
+    <Card title="Back" body="" href="/" classes="fixed" external={false} />
     <h1 class="center">
-      <span class="text-gradient">
-        MacBook Air 2018 Keyboard Interface
-      </span>
+      <span class="text-gradient">Brown Dining Website Redesign</span>
     </h1>
     <div class="body sidemargins">
       <p class="center top-margin">
         <i>
-          An interface many of us use every day, the keyboard is an input device
-          for personal computers and laptops. 
-          <br/>
-          It allows users to type digital characters
-          into a computer system to write words and invoke commands,
-          <br/>
-          for the purposes of
-          editing documents, searching the internet, and more.
+          A website many of us use every day, the Brown Dining website is used
+          to check meal times and meal contents.
         </i>
       </p>
       <div class="center">
-        <img class="image" src="../media/keyboardlayout.png"/>
-        <p><i>Figure 1. MacBook Air 2018 Keyboard Layout (Top View)</i></p>
-        <img class="image" src="../media/actuation.png"/>
-        <p><i>Figure 2. A single key, before and after actuation (Side View)</i></p>
-      </div>
-      
-      <div class="section">
-        <h2><span class="text-gradient">Interview Process</span></h2>
+        <a
+          href="https://dining.brown.edu/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img class="image" width="75%" src="../media/original.png" />
+        </a>
         <p>
-          I observed and interviewed three individuals using this keyboard to learn about
-          their experience using it. I principally wanted to focus on three areas:
+          <a
+            href="https://dining.brown.edu/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <i>Figure 1. Current Brown Dining Services website</i>
+          </a>
         </p>
-        <ul>
-          <li>Comfort of use</li>
-          <li>Recognizability of layout</li>
-          <li>Familiarity with shortcut commands</li>
-        </ul>
-        <p>
-          For the first metric, I primarily paid attention to how the users sat, and how they
-          positioned their arms and hands while typing. For the second and third, I observed
-          their behaviour following prompts and exercises. The observation period consisted of
-          three steps:
-        </p>
-        <ol>
-          <li>Perform an online typing test</li>
-          <li>Copying and pasting text</li>
-          <li>
-            Holding down each of <pre>fn</pre>, <pre>control</pre>, <pre>option</pre>, and
-            <pre>command</pre> keys, and pressing different regular characters
-          </li>
-        </ol>
       </div>
-      <div class="section">
-        <h2><span class="text-gradient">Observations</span></h2>
+
+      <div class="section" style="width: 70%">
+        <h2>
+          <span class="text-gradient">Why did I choose this website?</span>
+        </h2>
+        <p>
+          Years of using this website made me frustrated with its poor design,
+          specifically the amount of scrolling to get to the menu, the lack of
+          memorability, etc.
+        </p>
+      </div>
+      <div class="section" style="width: 70%">
+        <h2><span class="text-gradient">Observed Problems</span></h2>
         <div class="bottom-margin">
-          <b>User 1:</b> User appeared to be accustomed to layout of character keys, and did
-          not need to look at the keyboard when typing in the online test. 73 WPM. User attempted
-          to copy and paste with the control key, instead of the command key.
+          <br />
+          <b>Usability Issues:</b>
+          <ul>
+            <li>Too much wasted space, both in page and in navigation bars</li>
+            <li>The horizontal menu bar with an arrow cannot be clicked.</li>
+          </ul>
         </div>
         <div class="bottom-margin">
-          <b>User 2:</b> User was comfortable with the Mac keyboard, but frequently looked down at
-          the keys during the typing test. 40 WPM. User correctly used command key to copy and paste
-          on first attempt. Appeared to be caught off-guard by some of the more obscure functions, like <pre>option+h</pre>.
+          <b>Learnability Issues:</b>
+          <ul>
+            <li>
+              Filters do not show as active when outside the "FILTERS" menu
+            </li>
+            <li>"MENU ICON LEGEND" is out of view</li>
+            <li>Too many menu items</li>
+          </ul>
+        </div>
+        <div class="bottom-margin">
+          <b>Memorability Issues:</b>
+          <ul>
+            <li>
+              Does not feature name of website/does not mention Brown University
+            </li>
+          </ul>
         </div>
         <div>
-          <b>User 3:</b> User performed typing test with relative ease. 75 WPM. User had good working
-          knowledge of different commands, for instance: the difference between <pre>command+w</pre> 
-          and <pre>command+q</pre>. Position of arms looked unnatural/uncomfortable.
+          <b>Conceptual Model Disparity:</b><br />
+          The website aims to create an experience with its large images and multitude
+          of links, but it fails to acknowledge that it is truly used merely as an
+          informational resource.
+          <p></p>
         </div>
       </div>
-      <div class="section">
-        <h2><span class="text-gradient">Interview Questions</span></h2>
-        <ol>
-          <li>Did you find this keyboard to be comfortable to type on?</li>
-          <li>How does the feeling of pressing keys compare to keyboards you're used to?</li>
-          <li>Is the compressed keyboard layout comfortable for your hands?</li>
-          <li>Do you find yourself wishing that any of the keys were larger, smaller, or placed in different locations?</li>
-          <li>Is the copy + paste motion comfortable? What fingers do you use to accomplish this task?</li>
-          <li>Do you regularly use MacBook keyboards? If not, do you use other keyboards, and what system are they for?</li>
-          <li>Do you find that the modifier keys have consistent behaviors and functions?</li>
-          <li>What commands were you already familiar with?</li>
-        </ol>
-      </div>
-      <div class="section">
-        <h2><span class="text-gradient">Summary</span></h2>
-      <ul>
-        <li>Users who primarily use Windows found the copying and pasting control to be awkward, and the commands unintuitive and poorly grouped.</li>
-        <li>Users who primarily use Mac were comfortable with copying and pasting, but were surprised by some of the command functions.</li>
-        <li>Overall, the keyboard was thought to be comfortable to type on, but some may have preferred the keys to have a bit more travel.</li>
-        <li>Users agreed that there were too many modifier keys (`fn`, `control`, `option`, and `command`) with obscure functionality.</li>
-      </ul>
-      </div>
-      <div class="section">
-        <h2><span class="text-gradient">Personas</span></h2>
+      <div class="section" style="width: 70%">
+        <h2>
+          <span class="text-gradient">Accessibility Testing</span>
+        </h2>
+        <br />
+        Listed below are the accessibility issues found with the current website
+        by WebAIM WAVE.
+        <ul>
+          <li>
+            <span class="text-gradient">3</span> Aria errors on hidden elements
+          </li>
+          <li>
+            <span class="text-gradient">4</span> Contrast errors
+          </li>
+          <li>
+            <span class="text-gradient">126</span> redundant title/text/alt text
+          </li>
+          <li><span class="text-gradient">67</span> Long alt text</li>
+        </ul>
         <p>
-          Using the information garnered by the interview and observation process, I aggregated users'
-          experiences into two personas, roughly representing the main user groups of this product.
+          I disagree with the contrast errors, which are: dark grey against
+          white, and white against brown. The other problems are not apparent to
+          me as an abled user, but I see the redundancies, long alt texts, and
+          aria errors to be large problems in convenience and function for those
+          who use screenreaders.
         </p>
-        <div style="display:flex;">
-          <div class="center">
-            <img width="550px" src="../media/ivan.jpg">
-            <p><i>Figure 3. Ivan writes code on Windows/Linux keyboard layouts, and dislikes unnecessary complications.</i></p>
-          </div>
-          <div class="center">
-            <img width="552px" src="../media/carly.jpg">
-            <p><i>Figure 4. Carly studies language arts at university, and is getting used to a MacBook as a first computer.</i></p>
-          </div>
-        </div>
       </div>
       <div class="section">
-        <h2><span class="text-gradient">Storyboard</span></h2>
+        <h2 class="bottom-margin">
+          <span class="text-gradient">Visual Style Guide</span>
+        </h2>
+        <img src="../media/UI Style Guide.svg" />
         <p>
-          Apple markets its products in the interest of someone who's never used a device of theirs before. Let's see how Carly's
-          first experience with a MacBook goes!
+          Note: the check mark open icon was mangled when transferring to .svg
+          format. I assure you it looks normal in my design.
         </p>
-        <div class="center">
-          <img width="1000px" src="../media/storyboard.jpeg">
+      </div>
+      <div
+        class="section"
+        style="display:flex; flex-direction: column; align-items: center;"
+      >
+        <h2><span class="text-gradient">Wireframes</span></h2>
+        <p></p>
+        <span class="text-gradient" style="text-align: center; display: block">
+          Desktop
+        </span>
+        <img
+          width="95%"
+          style="background-color: #E5E5E5; padding: 0.5rem;"
+          src="../media/Desktop_LF.png"
+        />
+        <p></p>
+        <div style="display: flex; flex-direction: row;">
+          <div
+            style="display: flex; flex-direction: column; align-items: center"
+          >
+            <span class="text-gradient">Tablet</span><br />
+            <img width="65%" src="../media/Tablet_LF.png" />
+          </div>
+          <div
+            style="display: flex; flex-direction: column; align-items: center"
+          >
+            <span class="text-gradient">Mobile Phone</span><br />
+            <img width="52%" src="../media/iPhone_LF.png" />
+          </div>
         </div>
       </div>
+      <div
+        class="section"
+        style="display:flex; flex-direction: column; align-items: center;"
+      >
+        <h2><span class="text-gradient">Hi-fi Prototypes</span></h2>
+        <p></p>
+        <span class="text-gradient" style="text-align: center; display: block">
+          Desktop
+        </span>
+        <img
+          width="100%"
+          src="../media/Desktop_HF.svg"
+          style="background-color: #E5E5E5; padding: 0.5rem;"
+        />
+        <p></p>
+        <div style="display: flex; flex-direction: row;">
+          <div
+            style="display: flex; flex-direction: column; align-items: center"
+          >
+            <span class="text-gradient">Tablet</span><br />
+            <img width="75%" src="../media/Tablet_HF.svg" />
+          </div>
+          <div
+            style="display: flex; flex-direction: column; align-items: center"
+          >
+            <span class="text-gradient">Mobile Phone</span><br />
+            <img width="52%" src="../media/iPhone_HF.svg" />
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; justify-content: center;" class="bottom-margin">
+        <Card
+          title="Responsive Redesign"
+          body=""
+          href="/brown-dining-redesign"
+          classes=""
+          external={true}
+        />
+      </div>
+    </div>
+    <div
+      style="display:flex; flex-direction: column; align-items: center; justify-content: center;"
+    >
       <div class="section">
-        <div class="center">
+        <div class="center" style="justify-content: center;">
           <p>
-            Thanks for visiting my project! I hope you enjoyed exploring an everyday interface
-            with a bit more granularity than usual. <br/>
+            Thanks for visiting my project! I hope you enjoyed my critique
+            process and redesign. <br />
             <span class="text-gradient">♡</span>
           </p>
         </div>
@@ -139,15 +207,28 @@ import Card from "../components/Card.astro"
   :root {
     --astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
   }
-  
+
   main {
     color: white;
   }
 
+  a {
+    color: #62c4da;
+  }
+
+  a:visited {
+    color: #da62c4;
+  }
+
+  ul {
+    margin-top: 0;
+  }
+
   h1 {
+    margin-top: 1rem;
     margin-bottom: 0;
   }
-  
+
   h2 {
     margin: 0;
   }
@@ -157,6 +238,12 @@ import Card from "../components/Card.astro"
     margin: 0;
     padding: 0;
   }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+  }
+
   .center {
     text-align: center;
     width: 100%;
@@ -185,26 +272,27 @@ import Card from "../components/Card.astro"
     padding: 0.5rem 1rem;
     border-radius: 15px;
     margin-bottom: 1rem;
+    align-self: center;
   }
 
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--astro-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
-	}
+  .text-gradient {
+    font-weight: 900;
+    background-image: var(--astro-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 100% 200%;
+    background-position-y: 100%;
+    border-radius: 0.4rem;
+    animation: pulse 4s ease-in-out infinite;
+  }
 
   @keyframes pulse {
-		0%,
-		100% {
-			background-position-y: 0%;
-		}
-		50% {
-			background-position-y: 80%;
-		}
-	}
+    0%,
+    100% {
+      background-position-y: 0%;
+    }
+    50% {
+      background-position-y: 80%;
+    }
+  }
 </style>
