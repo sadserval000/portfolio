@@ -1,0 +1,254 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="Personas & Storyboarding">
+  <main>
+    <Card title="Back" body="" href="/" classes="fixed" external={false} />
+    <h1 class="center">
+      <span class="text-gradient"> MacBook Air 2018 Keyboard Interface</span>
+    </h1>
+    <div class="body sidemargins">
+      <p class="center top-margin">
+        <i>
+          An interface many of us use every day, the keyboard is an input device
+          for personal computers and laptops.
+          <br />
+          It allows users to type digital characters into a computer system to write
+          words and invoke commands,
+          <br />
+          for the purposes of editing documents, searching the internet, and more.
+        </i>
+      </p>
+      <div class="center">
+        <img class="image" src="../media/personas/keyboardlayout.png" />
+        <p><i>Figure 1. MacBook Air 2018 Keyboard Layout (Top View)</i></p>
+        <img class="image" src="../media/personas/actuation.png" />
+        <p>
+          <i>Figure 2. A single key, before and after actuation (Side View)</i>
+        </p>
+      </div>
+
+      <div class="section">
+        <h2><span class="text-gradient">Interview Process</span></h2>
+        <p>
+          I observed and interviewed three individuals using this keyboard to
+          learn about their experience using it. I principally wanted to focus
+          on three areas:
+        </p>
+        <ul>
+          <li>Comfort of use</li>
+          <li>Recognizability of layout</li>
+          <li>Familiarity with shortcut commands</li>
+        </ul>
+        <p>
+          For the first metric, I primarily paid attention to how the users sat,
+          and how they positioned their arms and hands while typing. For the
+          second and third, I observed their behaviour following prompts and
+          exercises. The observation period consisted of three steps:
+        </p>
+        <ol>
+          <li>Perform an online typing test</li>
+          <li>Copying and pasting text</li>
+          <li>
+            Holding down each of <pre>fn</pre>, <pre>control</pre>, <pre>option</pre>,
+            and
+            <pre>command</pre> keys, and pressing different regular characters
+          </li>
+        </ol>
+      </div>
+      <div class="section">
+        <h2><span class="text-gradient">Observations</span></h2>
+        <div class="bottom-margin">
+          <b>User 1:</b> User appeared to be accustomed to layout of character keys,
+          and did not need to look at the keyboard when typing in the online test.
+          73 WPM. User attempted to copy and paste with the control key, instead
+          of the command key.
+        </div>
+        <div class="bottom-margin">
+          <b>User 2:</b> User was comfortable with the Mac keyboard, but frequently
+          looked down at the keys during the typing test. 40 WPM. User correctly
+          used command key to copy and paste on first attempt. Appeared to be caught
+          off-guard by some of the more obscure functions, like <pre>option+h</pre>.
+        </div>
+        <div>
+          <b>User 3:</b> User performed typing test with relative ease. 75 WPM. User
+          had good working knowledge of different commands, for instance: the difference
+          between <pre>command+w</pre>
+          and <pre>command+q</pre>. Position of arms looked
+          unnatural/uncomfortable.
+        </div>
+      </div>
+      <div class="section">
+        <h2><span class="text-gradient">Interview Questions</span></h2>
+        <ol>
+          <li>Did you find this keyboard to be comfortable to type on?</li>
+          <li>
+            How does the feeling of pressing keys compare to keyboards you're
+            used to?
+          </li>
+          <li>Is the compressed keyboard layout comfortable for your hands?</li>
+          <li>
+            Do you find yourself wishing that any of the keys were larger,
+            smaller, or placed in different locations?
+          </li>
+          <li>
+            Is the copy + paste motion comfortable? What fingers do you use to
+            accomplish this task?
+          </li>
+          <li>
+            Do you regularly use MacBook keyboards? If not, do you use other
+            keyboards, and what system are they for?
+          </li>
+          <li>
+            Do you find that the modifier keys have consistent behaviors and
+            functions?
+          </li>
+          <li>What commands were you already familiar with?</li>
+        </ol>
+      </div>
+      <div class="section">
+        <h2><span class="text-gradient">Summary</span></h2>
+        <ul>
+          <li>
+            Users who primarily use Windows found the copying and pasting
+            control to be awkward, and the commands unintuitive and poorly
+            grouped.
+          </li>
+          <li>
+            Users who primarily use Mac were comfortable with copying and
+            pasting, but were surprised by some of the command functions.
+          </li>
+          <li>
+            Overall, the keyboard was thought to be comfortable to type on, but
+            some may have preferred the keys to have a bit more travel.
+          </li>
+          <li>
+            Users agreed that there were too many modifier keys (`fn`,
+            `control`, `option`, and `command`) with obscure functionality.
+          </li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2><span class="text-gradient">Personas</span></h2>
+        <p>
+          Using the information garnered by the interview and observation
+          process, I aggregated users' experiences into two personas, roughly
+          representing the main user groups of this product.
+        </p>
+        <div style="display:flex;">
+          <div class="center">
+            <img width="550px" src="../media/personas/ivan.jpg" />
+            <p>
+              <i
+                >Figure 3. Ivan writes code on Windows/Linux keyboard layouts,
+                and dislikes unnecessary complications.</i>
+            </p>
+          </div>
+          <div class="center">
+            <img width="552px" src="../media/personas/carly.jpg" />
+            <p>
+              <i
+                >Figure 4. Carly studies language arts at university, and is
+                getting used to a MacBook as a first computer.</i>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <h2><span class="text-gradient">Storyboard</span></h2>
+        <p>
+          Apple markets its products in the interest of someone who's never used
+          a device of theirs before. Let's see how Carly's first experience with
+          a MacBook goes!
+        </p>
+        <div class="center">
+          <img width="1000px" src="../media/personas/storyboard.jpeg" />
+        </div>
+      </div>
+      <div class="section">
+        <div class="center">
+          <p>
+            Thanks for visiting my project! I hope you enjoyed exploring an
+            everyday interface with a bit more granularity than usual. <br />
+            <span class="text-gradient">♡</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+<style>
+  :root {
+    --astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+  }
+
+  main {
+    color: white;
+  }
+
+  h1 {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  pre {
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+  .center {
+    text-align: center;
+    width: 100%;
+  }
+
+  .sidemargins {
+    margin: 0 7rem;
+  }
+
+  .image {
+    margin-top: 2rem;
+    background-color: white;
+    padding: 1rem;
+  }
+
+  .top-margin {
+    margin-top: 0.875rem;
+  }
+
+  .bottom-margin {
+    margin-bottom: 1rem;
+  }
+
+  .section {
+    background-color: rgb(50, 50, 50);
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+  }
+
+  .text-gradient {
+    font-weight: 900;
+    background-image: var(--astro-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 100% 200%;
+    background-position-y: 100%;
+    border-radius: 0.4rem;
+    animation: pulse 4s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      background-position-y: 0%;
+    }
+    50% {
+      background-position-y: 80%;
+    }
+  }
+</style>

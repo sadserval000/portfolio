@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Brown Dining Redesign</title>
+  </head>
+  <body>
+    <div class="white-container hamburger pointer">
+      <img class="icon-medium" src="../icons/hamburger-icon.svg" />
+    </div>
+    <h1>Brown Dining Services</h1>
+    <div class="top-container">
+      <div class="café-container">
+        <h2>Café</h2>
+        <div class="white-container café-selector pointer flex">
+          <img class="icon-small check" src="../icons/check-mark.svg" /><h4>Verney-Woolley</h4>
+          <img class="icon-small" src="../icons/dropdown.svg" />
+        </div>
+      </div>
+      <div class="date-container">
+        <h2>Date</h2>
+        <div class="white-container date-selector pointer flex">
+          <h4>Today</h4>
+          <img class="icon-small" src="../icons/dropdown.svg" />
+        </div>
+      </div>
+      <div class="df-container">
+        <h2>Dietary Filters</h2>
+        <div class="df-checkbox-container">
+          <div class="df-subcontainer">
+            <input type="checkbox" class="df-checkbox" id="gf-df" />
+            <label class="white-container" for="gf-df" tabindex="0">
+              Gluten Free
+            </label>
+            <input type="checkbox" class="df-checkbox" id="gf-hl" />
+            <label class="white-container" for="gf-hl" tabindex="0">
+              Halal
+            </label>
+          </div>
+          <div class="df-subcontainer">
+            <input type="checkbox" class="df-checkbox" id="gf-v" />
+            <label class="white-container" for="gf-v" tabindex="0">
+              Vegan
+            </label>
+            <input type="checkbox" class="df-checkbox" id="gf-vg" />
+            <label class="white-container" for="gf-vg" tabindex="0">
+              Vegetarian
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-container">
+      <aside class="sides">
+        <div class="white-container schedule">
+          <h3>Schedule</h3>
+          <p>
+            <i>Breakfast:</i><br />
+            M-F 7:30AM - 11AM<br />
+            <i>Lunch:</i><br />
+            M-F 11AM - 4PM<br />
+            <i>Dinner:</i><br />
+            M-F 4PM - 8:30PM
+          </p>
+        </div>
+        <div class="white-container about">
+          <h3>About Verney-Woolley</h3>
+          <p>
+            Meal pick-up locations during the Summer PreCollege Program only.
+            Please email questions to DINING_SERVICES@BROWN.EDU
+          </p>
+        </div>
+        <div class="white-container legend">
+          <h3>Legend</h3>
+          <div class="legend-content">
+            <div class="flex">
+              <img class="icon-small" src="../icons/vegetarian.png" />
+              <h5>Vegetarian</h5>
+            </div>
+            <div class="flex">
+              <img class="icon-small" src="../icons/vegan.png" />
+              <h5>Vegan</h5>
+            </div>
+            <div class="flex">
+              <img class="icon-small" src="../icons/glutenfree.png" />
+              <h5>Gluten Free</h5>
+            </div>
+            <div class="flex">
+              <img class="icon-small" src="../icons/halal.png" />
+              <h5>Halal</h5>
+            </div>
+            <div class="flex">
+              <img class="icon-small" src="../icons/farmtofork.png" />
+              <h5>Farm to Fork</h5>
+            </div>
+            <div class="flex" style="justify-items: left">
+              <img class="icon-small" src="../icons/seafood.png" />
+              <h5>Seafood Watch</h5>
+            </div>
+            <div class="flex">
+              <img class="icon-small" src="../icons/humane.png" />
+              <h5>Humane</h5>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div class="middle">
+        <div class="closed-meal-selector">
+          <div class="white-container meal-selector-header pointer">
+            <h4>Breakfast</h4>
+            <h5>7:30 AM - 11:00 AM</h5>
+            <img class="icon-large" src="../icons/dropdown.svg" />
+          </div>
+        </div>
+        <div class="open-meal-selector">
+          <div class="white-container meal-selector-header pointer">
+            <h4>Lunch</h4>
+            <h5>11:00 AM - 4:00 PM</h5>
+            <img class="icon-medium" src="../icons/x-mark.svg" />
+          </div>
+          <div class="white-container meal-selector-content">
+            <div class="column">
+              <div class="meal-item">
+                <img class="icon-small" src="../icons/vegan.png" />
+                <img class="icon-small" src="../icons/glutenfree.png" />
+                Basmati Rice
+              </div>
+              <div class="meal-item">
+                <img class="icon-small" src="../icons/vegan.png" />
+                Hearts of Palm
+              </div>
+            </div>
+            <div class="column">
+              <div class="meal-item">
+                <img class="icon-small" src="../icons/glutenfree.png" />
+                <img class="icon-small" src="../icons/halal.png" />
+                Chicken Thighs
+              </div>
+              <div class="meal-item">
+                <img class="icon-small" src="../icons/vegetarian.png" />
+                <img class="icon-small" src="../icons/glutenfree.png" />
+                Mushroom Risotto
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="closed-meal-selector">
+          <div class="white-container meal-selector-header pointer">
+            <h4>Dinner</h4>
+            <h5>4:00 PM - 8:30 PM</h5>
+            <img class="icon-large" src="../icons/dropdown.svg" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      :root {
+        --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+        --font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
+        --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+
+        --color-text: hsl(0, 0%, 29%);
+        --color-bg: #644f43;
+        --color-border: hsl(17, 24%, 90%);
+        --color-red: #c00404;
+        --color-medium-red: #d83d3d;
+        --color-light-red: #fed8d8;
+        --color-grey: #e2e2e2;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+
+      html {
+        background-color: var(--color-bg);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        padding: 0;
+        margin: 0;
+      }
+
+      aside {
+        width: 30%;
+      }
+
+      aside > .white-container {
+        max-width: 150px;
+        margin: 20px 20px;
+        overflow-wrap: break-word;
+        text-align: center;
+      }
+
+      h1 {
+        color: white;
+        text-align: center;
+        margin: 2rem 0 2rem 0;
+      }
+
+      h2 {
+        color: white;
+      }
+
+      .white-container {
+        background-color: white;
+        padding: 1rem 1rem;
+        border-radius: 0.25rem;
+        width: fit-content;
+      }
+
+      .pointer {
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+
+      .pointer:hover {
+        background-color: var(--color-grey);
+        transition: background-color 0.2s;
+      }
+
+      .hamburger {
+        position: fixed;
+        top: 0.5em;
+        left: 0.5em;
+        height: fit-content;
+        padding: 0.25rem 0.4rem 0rem 0.4rem;
+      }
+
+      .check {
+        background-color: green;
+        stroke: white;
+        padding: 3px;
+        border-radius: 50%;
+      }
+
+      .top-container {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .df-checkbox-container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      input[type="checkbox"] + label {
+        display: inline-block;
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+/Edge */
+        user-select: none; /* Standard */
+
+        padding: 10px;
+        cursor: pointer;
+        color: var(--color-red);
+        background-color: white;
+        margin-bottom: 10px;
+        transition: background-color 0.2s;
+      }
+
+      input[type="checkbox"] + label:hover {
+        background-color: var(--color-light-red);
+        transition: background-color 0.2s;
+      }
+
+      input[type="checkbox"]:checked + label {
+        color: white;
+        background-color: var(--color-red);
+        transition: background-color 0.2s;
+      }
+
+      input[type="checkbox"]:checked + label:hover {
+        background-color: var(--color-medium-red);
+        transition: background-color 0.2s;
+      }
+
+      .open-meal-selector,
+      .closed-meal-selector {
+        width: 70%;
+        margin-bottom: 1rem;
+      }
+
+      .meal-selector-header {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .open-meal-selector > .meal-selector-header {
+        border-radius: 3px 3px 0 0;
+        gap: 10px;
+      }
+
+      .meal-selector-content {
+        border-radius: 0 0 3px 3px;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .icon-small {
+        width: 16px;
+        height: 16px;
+      }
+
+      .icon-medium {
+        width: 22px;
+        height: 22px;
+      }
+
+      .icon-large {
+        width: 24px;
+        height: 32px;
+      }
+
+      .flex {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .legend {
+        position: fixed;
+        bottom: 1rem;
+        right: 0.5rem;
+      }
+
+      .legend > h3 {
+        margin-bottom: 1rem;
+      }
+
+      .flex > h5 {
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      .schedule {
+        width: 100%;
+      }
+
+      .about > h3 {
+        font-size: 1rem;
+      }
+
+      .main-container {
+        display: flex;
+      }
+
+      .middle {
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      @media (max-width: 1016px) {
+        .legend {
+          position: inherit;
+          width: auto;
+        }
+
+        .open-meal-selector,
+        .closed-meal-selector {
+          width: 90%;
+        }
+      }
+
+      @media (max-width: 750px) {
+        .main-container {
+          flex-direction: column;
+        }
+
+        .middle {
+          order: 0;
+          justify-content: center;
+        }
+
+        .meal-selector-header {
+          width: 90%;
+        }
+        .meal-selector-content {
+          width: 90%;
+        }
+        .open-meal-selector {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+        }
+
+        .closed-meal-selector {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+        }
+
+        aside {
+          order: 1;
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+        aside > .white-container {
+          min-width: 150px;
+        }
+      }
+
+      @media (max-width: 530px) {
+        .top-container {
+          flex-wrap: wrap;
+        }
+
+        .df-container {
+          margin-top: 10px;
+        }
+
+        .df-checkbox-container {
+          flex-direction: row;
+        }
+
+        .df-subcontainer + .df-subcontainer {
+          margin-left: 10px;
+        }
+      }
+    </style>
+  </body>
+</html>
