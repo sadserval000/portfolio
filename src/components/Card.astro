@@ -4,17 +4,19 @@ export interface Props {
 	body: string;
 	href: string;
 	classes: string;
-	external: boolean
+	external: boolean;
+	flipped?: boolean;
 }
 
-const { href, title, body, classes, external } = Astro.props;
+const { href, title, body, classes, external, flipped } = Astro.props;
 ---
 
 <li class={`link-card ${classes}`}>
 	<a href={href} target={external ? "_blank" : ""}>
 		<h2>
+			{flipped ? <span class="flipped">&larr;</span> : null}
 			{title}
-			<span>&rarr;</span>
+			{!flipped ? <span class="normal">&rarr;</span> : null}
 		</h2>
 		<p>
 			{body}
@@ -23,7 +25,13 @@ const { href, title, body, classes, external } = Astro.props;
 </li>
 <style>
 	:root {
-		--link-gradient: linear-gradient(45deg, #b9b0ff, #d179c0, 30%, var(--color-border) 60%);
+		--link-gradient: linear-gradient(
+			45deg,
+			#b9b0ff,
+			#d179c0,
+			30%,
+			var(--color-border) 60%
+		);
 	}
 
 	.fixed {
@@ -57,7 +65,6 @@ const { href, title, body, classes, external } = Astro.props;
 		height: fit-content;
 	}
 
-
 	h2 {
 		margin: 0;
 		color: var(--color-bg);
@@ -82,8 +89,13 @@ const { href, title, body, classes, external } = Astro.props;
 		color: #4f39fa;
 	}
 
-	.link-card:is(:hover, :focus-within) h2 span {
+	.link-card:is(:hover, :focus-within) h2 span.normal {
 		will-change: transform;
 		transform: translateX(2px);
+	}
+
+	.link-card:is(:hover, :focus-within) h2 span.flipped {
+		will-change: transform;
+		transform: translateX(-2px);
 	}
 </style>

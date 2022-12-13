@@ -5,12 +5,21 @@ import Card from "../components/Card.astro";
 
 <Layout title="Needl - Iterative Design">
   <main>
-    <Card title="Back" body="" href="/" classes="fixed" external={false} />
+    <Card title="Back" body="" href="/" classes="fixed" external={false} flipped={true}/>
     <h1 class="center">
       <span class="text-gradient">Needl - Iterative Design</span>
     </h1>
     <div class="body sidemargins">
       <p class="center top-margin"></p>
+      <div class="section" style="width: 70%">
+        <h2>
+          <span class="text-gradient">Purpose</span>
+        </h2>
+        <p>
+          To design an application mockup for a startup, focusing on the
+          mechanisms essential to their project's goal.
+        </p>
+      </div>
       <div class="section" style="width: 70%">
         <h2>
           <span class="text-gradient">Startup Details</span>
@@ -24,41 +33,6 @@ import Card from "../components/Card.astro";
           bundle might include Slack and Microsoft Teams, while your “home”
           bundle might have Notion and Gmail).
         </p>
-      </div>
-      <div class="section" style="width: 70%">
-        <h2><span class="text-gradient">Initial Sketches</span></h2>
-        <span class="text-gradient" style="text-align: center; display: block">
-          Set 1
-        </span>
-        <div class="center">
-          <img width="50%" src="../media/needl/uiux1.jpeg" />
-        </div>
-        <span class="text-gradient" style="text-align: center; display: block">
-          Set 2
-        </span>
-        <div class="center">
-          <img
-            width="50%"
-            style="transform:rotate(-90deg)"
-            src="../media/needl/uiux2.jpeg"
-          />
-        </div>
-        <span class="text-gradient" style="text-align: center; display: block">
-          Set 3
-        </span>
-        <div class="center">
-          <img
-            width="50%"
-            style="transform:rotate(-90deg)"
-            src="../media/needl/uiux3.jpeg"
-          />
-        </div>
-        <span class="text-gradient" style="text-align: center; display: block">
-          Set 4
-        </span>
-        <div class="center">
-          <img width="50%" src="../media/needl/uiux4.jpeg" />
-        </div>
       </div>
       <div class="section" style="width: 70%">
         <h2>

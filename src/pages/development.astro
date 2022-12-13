@@ -1,0 +1,161 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="Playlister">
+  <main>
+    <Card
+      title="Back"
+      body=""
+      href="/"
+      classes="fixed"
+      external={false}
+      flipped={true}
+    />
+    <h1 class="center">
+      <span class="text-gradient">Playlister</span>
+    </h1>
+    <div class="body sidemargins">
+      <p class="center top-margin">
+        <i>
+          A project originally focusing on the basics of React state, which I
+          expanded to include media playback. Includes sorting, filtering, and
+          aggregation of songs into a playlist.
+        </i>
+      </p>
+      <div class="center">
+        <a href="/playlister" rel="noopener noreferrer" target="_blank">
+          <img
+            width="75%"
+            src="../media/playlister/cover.png"
+            alt="A cover image for the application."
+          />
+        </a>
+        <p>
+          <a href="/playlister" rel="noopener noreferrer" target="_blank">
+            <i>Figure 1. Main view of the application.</i>
+          </a>
+        </p>
+      </div>
+      <div class="section" style="width: 70%">
+        <h2>
+          <span class="text-gradient">Objective</span>
+        </h2>
+        <p>
+          This application was created as part of a basic React assignment for
+          my UI/UX class. We were to create a list of items, with filtering,
+          sorting, and aggregating functionality. I chose songs as my type of
+          item. Since I had been using React for quite some time at that point,
+          I elected to augment the application to include media playback of the
+          songs as well.
+        </p>
+      </div>
+    </div>
+    <div
+      style="display:flex; flex-direction: column; align-items: center; justify-content: center;"
+    >
+      <div class="section">
+        <div class="center" style="justify-content: center;">
+          <p>
+            Thanks for visiting my project! <br />
+            <span class="text-gradient">♡</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+<style>
+  :root {
+    --astro-gradient: linear-gradient(0deg, #b9b0ff, #d179c0);
+  }
+
+  main {
+    color: white;
+  }
+
+  a {
+    color: #62c4da;
+  }
+
+  a:visited {
+    color: #da62c4;
+  }
+
+  ul {
+    margin-top: 0;
+  }
+
+  h1 {
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  pre {
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .center {
+    text-align: center;
+    width: 100%;
+  }
+
+  .sidemargins {
+    margin: 0 7rem;
+  }
+
+  .image {
+    margin-top: 2rem;
+    background-color: white;
+    padding: 1rem;
+  }
+
+  .top-margin {
+    margin-top: 0.875rem;
+  }
+
+  .bottom-margin {
+    margin-bottom: 1rem;
+  }
+
+  .section {
+    background-color: rgb(50, 50, 50);
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    align-self: center;
+  }
+
+  .text-gradient {
+    font-weight: 900;
+    background-image: var(--astro-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 100% 200%;
+    background-position-y: 100%;
+    border-radius: 0.4rem;
+    animation: pulse 4s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      background-position-y: 0%;
+    }
+    50% {
+      background-position-y: 80%;
+    }
+  }
+</style>
